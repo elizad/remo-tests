@@ -1,0 +1,10 @@
+import pytest.ini
+
+ class TestSearch:
+
+    def test_search(self, mozwebqa):
+    home = Home(mozwebqa)
+
+    home.go_to_homepage()
+    faq = home.header.click_faq_link()
+    Assert.true(faq.is_faq_sidebar_visible)
